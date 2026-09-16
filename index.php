@@ -1608,7 +1608,7 @@ if (FM_IS_ADMIN && isset($_POST['type']) && in_array($_POST['type'], ['listusers
         if (!empty($_POST['app-title'])) {
             $newTitle = addslashes(trim(strip_tags($_POST['app-title'])));
             if ($newTitle !== APP_TITLE) { $changeLog[] = "app_title -> '{$newTitle}'"; }
-            $fsrc = preg_replace("/define\('APP_TITLE',\s*'[^']*'\);/", "define('APP_TITLE', 'Tiny File Manager');", $fsrc);
+            $fsrc = preg_replace("/define\('APP_TITLE',\s*'[^']*'\);/", "define('APP_TITLE', 'TFM');", $fsrc);
         }
         $newUser = trim($_POST['app-username'] ?? '');
         $oldUser = trim($_POST['app-username-old'] ?? '');
